@@ -13,7 +13,8 @@ def pagina_imc(request):
         peso = float(peso)
         altura = float(altura)
 
-        imc = peso * altura + altura
+        imc = peso / (altura * altura)
+        imc= round(imc, 2)
 
         estado_imc = ''
 
@@ -22,12 +23,20 @@ def pagina_imc(request):
         if imc < 18.5:
             estado_imc = 'Abaixo do peso'
             cor_estado_imc = 'yellow'
-        elif imc > 24.9:
-            estado_imc = 'Acima do peso'
-            cor_estado_imc = 'red'
-        else:
+        
+        elif imc <= 18.5 and imc >= 24.9:
             estado_imc = 'Peso normal'
             cor_estado_imc = 'green'
+
+        elif imc >= 25 and imc <= 29.9:
+            estado_imc = 'Acima do peso'
+            cor_estado_imc = 'red'
+
+        elif imc >= 30 and <= 34.9:
+          estado_imc = 'Obesidade I'
+          cor_estado_imc = 'red'
+          
+                    
 
         contexto = {
             'imc': imc,
