@@ -1,0 +1,25 @@
+Objetivo: Desenvolver um sistema que calcule o Índice de Massa Corporal (IMC) de um indivíduo e classifique-o em um dos 5 níveis pré-definidos.
+
+Requisitos Funcionais:
+
+1. Entrada de Dados:
+   Solicitar ao usuário as seguintes informações:
+     Peso (em quilogramas)
+     Altura (em metros)
+2. Cálculo do IMC:
+   Implementar a fórmula matemática para calcular o IMC: IMC = peso / (altura X altura)
+3. Classificação do IMC:
+   Definir os seguintes níveis de IMC e seus respectivos intervalos:
+     Muito abaixo do peso: IMC < 16
+     Abaixo do peso: 16 ≤ IMC < 18.5
+     Peso normal: 18.5 ≤ IMC < 25
+     Acima do peso: 25 ≤ IMC < 30
+     Obesidade: IMC ≥ 30
+   Comparar o valor calculado do IMC com os intervalos definidos e classificar o indivíduo em um dos níveis.
+4. Saída de Dados:
+   Apresentar ao usuário o resultado do cálculo do IMC e a classificação correspondente de forma clara e concisa juntamente com uma cor correspondente.
+5. Validação de Dados:
+   Verificar se os valores de peso e altura informados pelo usuário são válidos (positivos e numéricos).
+   Exibir uma mensagem de erro caso os dados sejam inválidos.
+6. Opção de Novo Cálculo:
+   Permitir que o usuário realize novos cálculos sem precisar reiniciar o programa.

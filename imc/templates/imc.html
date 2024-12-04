@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cáculo de IMC</title>
+
+    <style>
+        #div_resultado {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cáculo do Glicemia</h1>
+
+    Valor IMC: {{ imc }}
+    <div id="div_resultado" style="background-color: {{ cor_estado_imc }};">
+        Status: {{ estado_imc }}
+    </div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="peso">
+        <input type="text" name="altura">
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+
+</html>
