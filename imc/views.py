@@ -24,17 +24,25 @@ def pagina_imc(request):
             estado_imc = 'Abaixo do peso'
             cor_estado_imc = 'yellow'
         
-        elif imc <= 18.5 and imc >= 24.9:
+        elif  18.5 <= imc < 24.9:
             estado_imc = 'Peso normal'
             cor_estado_imc = 'green'
 
-        elif imc >= 25 and imc <= 29.9:
+        elif  25 <=imc < 29.9:
             estado_imc = 'Acima do peso'
             cor_estado_imc = 'red'
 
-        elif imc >= 30 and <= 34.9:
+        elif  30 <= imc < 34.9:
           estado_imc = 'Obesidade I'
           cor_estado_imc = 'red'
+         
+        elif  35 <= imc < 39.9:
+            estado_imc = 'Obesidade II'
+            cor_estado_imc = 'red'
+
+        else:
+            estado_imc = 'Obesidade III'
+            cor_estado_imc = 'red'
           
                     
 
